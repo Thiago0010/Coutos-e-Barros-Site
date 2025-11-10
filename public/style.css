@@ -1,0 +1,708 @@
+
+body{
+    
+     filter: grayscale(10%);
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5dc;
+    overflow-x: hidden;
+}
+header{
+    background-color: #1c4622;
+    text-align: center;
+    padding: 25px;
+    display: flex;
+    flex-direction:row;
+}
+header h1{
+    color: #EFEFEF;
+    font-size: 2.5rem;
+    position: relative;
+    left: 20px;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+header h1 a{
+    color: #EFEFEF;
+    text-decoration: none;
+}
+.dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #254b2b;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 7px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            margin: 0;
+        }
+        .dropdown-content a:hover {
+            background-color: #19361d;
+            color: oklab(94.434% -0.06527 0.15489);
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            /* overflow: hidden; */
+            color: white;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        header ul li a{
+            display: block;
+            color: white;
+            text-align: end;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        header ul li{
+            position: relative;
+            right: -400px;
+            top: 2px;
+            font-weight: 600;
+        }
+        .hero {
+            position: relative;
+            height: 490px; /* Ajuste conforme a imagem */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 2rem;
+            overflow: hidden; /* Garante que o fundo não vaze */
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./imgs/banner-home-min.png'); /* Imagem mais vívida com iluminação quente */
+            background-size: cover;
+            background-position: center;
+            filter: saturate(1.3) brightness(0.7); /* Ajuste para maior vivacidade e luz, aplicado apenas ao fundo */
+            z-index: 0;
+        }
+
+        .hero-content {
+            text-align: left;
+            position: relative;
+            z-index: 1; /* Garante que o texto fique acima do fundo filtrado */
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.7rem;
+            margin: 0;
+            color: #fff; /* Mantém o texto 100% branco, sem filtro aplicado */
+            font-weight: 900;
+            position: relative;
+            right: -90px;
+            top: -30px;
+        }
+        .NEV {
+            width: 60px;
+            height: 60px;
+            background-color: #8a783f; /* Marrom */
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            top: -30px;
+        }
+        .verde{
+            color: #374b3a;
+        }
+        .about-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .about-text {
+            font-size: 1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.5;
+        }
+
+        .about-btn {
+            background-color: #e2be8e; /* Bege claro */
+            color: #0000005b;
+            border: none;
+            border-radius: 20px;
+            padding: 0.75rem 2rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .about-btn:hover {
+            transition: background-color 0.7s, color 0.7s;
+            background-color: #fffcf7; /* Bege escuro */
+            border: 2px solid #e2be8e;
+            color: #b49061;
+        }
+        .about-section {
+            position: relative;
+            background-color: #f5f5dc; /* Bege */
+            padding: 4rem 2rem;
+            text-align: center;
+            color: #004d40;
+        }
+        .awards-section {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: #fff;
+        }
+
+        .awards-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #8f806d; /* Cor dourada/bege claro para o título */
+            margin-bottom: 5rem;
+        }
+
+        .awards-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem; /* Espaçamento entre logos */
+            flex-wrap: wrap; /* Responsivo para telas menores */
+        }
+
+        .awards-logos img {
+            width: 190px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            border-radius: 50%; /* Formato circular, se aplicável */
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .awards-logos {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        .practice-section {
+            padding: 4rem 2rem;
+            text-align: left; /* Alinhamento à esquerda para simular a imagem */
+            margin: 0 auto;
+            background-color: #004d40; /* Verde escuro conforme a imagem */
+            height: auto;
+            width: 96%;
+            overflow: hidden;
+        }
+
+        .practice-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #b69b78; /* Bege claro para o título */
+            margin-bottom: 2rem;
+            text-align: center; /* Centralizado conforme a imagem */
+        }
+
+        .practice-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .practice-list li {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 800;
+            text-align: center;        }
+        .practice-list li a {
+            color: #f5f5dc; /* Texto bege claro */
+            text-decoration: none;
+        }
+        .practice-list li a:hover {
+            color: #c2b864;
+            transition: color 0.5s;
+        }
+        .lawyers-section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .lawyers-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #004d40; /* Verde escuro */
+            margin-bottom: 2rem;
+        }
+
+        .lawyers-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .lawyer-card {
+            width: 180px;
+            text-align: center;
+        }
+
+        .lawyer-img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .lawyer-name {
+            font-size: 1.1rem;
+            color: #d2b48c; /* Bege claro */
+            margin: 0.5rem 0 0;
+        }
+
+        .lawyer-sub {
+            font-size: 1rem;
+            color: #d2b48c;
+            margin-top: 0;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .icon {
+            background-color: #f5f5dc;
+            border: 1px solid #d2b48c;
+            border-radius: 20px;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.8rem;
+            color: #d2b48c;
+        }
+        .why-choose-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .why-choose-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #004d40; /* Verde escuro */
+            margin-bottom: 2rem;
+        }
+
+        .why-choose-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .why-choose-list li {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .why-choose-list li strong {
+            color: #d2b48c; /* Bege claro para destaque */
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .why-choose-section {
+                padding: 3rem 1rem;
+            }
+            .why-choose-title {
+                font-size: 2rem;
+            }
+        }
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            flex: 1;
+            background-color: #004d40; /* Verde escuro para o lado 1 */
+            color: #fff; /* Texto branco para contraste */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            color: #d2b48c; /* Bege claro no hover */
+        }
+
+        .contact-info span {
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: #f5f5dc; /* Bege para o lado 2 */
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #004d40;
+            margin-bottom: 1rem;
+        }
+
+        .contact-desc {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            color: #004d40;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #004d40;
+        }
+
+        input, textarea {
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #d2b48c;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #fff;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #004d40;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 0.75rem 2rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-transform: uppercase;
+            align-self: flex-start;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #d2b48c;
+            color: #004d40;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                padding: 3rem 1rem;
+            }
+            .contact-title {
+                font-size: 2rem;
+            }
+        }
+        footer {
+            background-color: #004d40; /* Verde escuro para o footer */
+            color: #fff; /* Texto branco para contraste */
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #d2b48c; /* Bege claro para o logo */
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .footer-links a:hover {
+            color: #d2b48c; /* Bege claro no hover */
+        }
+
+        .footer-copyright {
+            margin-top: 1rem;
+            border-top: 1px solid #d2b48c;
+            padding-top: 1rem;
+            font-size: 0.8rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        .office-nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .office-nav li {
+            margin: 0 1rem;
+        }
+
+        .office-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .office-search-btn {
+            background-color: #fff;
+            color: #004d40;
+            border: none;
+            border-radius: 20px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .office-main-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .office-main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #004d40;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .office-content-section {
+            margin-bottom: 3rem;
+        }
+
+        .office-content-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #004d40;
+            margin-bottom: 1rem;
+        }
+
+        .office-content-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .office-history-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .office-history-item {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .office-history-item h3 {
+            font-size: 1.5rem;
+            color: #d2b48c;
+            margin-bottom: 0.5rem;
+        }
+
+        .office-locations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .office-location {
+            flex: 1 1 300px;
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .office-location h3 {
+            font-size: 1.5rem;
+            color: #d2b48c;
+            margin-bottom: 0.5rem;
+        }
+
+        .office-awards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .office-award-item {
+            flex: 1 1 250px;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .office-whatsapp-icon {
+            position: fixed;
+            right: 2rem;
+            bottom: 2rem;
+            z-index: 10;
+        }
+
+        .office-whatsapp-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .office-footer {
+            background-color: #004d40; /* Verde escuro para o footer */
+            color: #fff; /* Texto branco para contraste */
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .office-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .office-footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #d2b48c; /* Bege claro para o logo */
+        }
+
+        .office-footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .office-footer-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .office-footer-links a:hover {
+            color: #d2b48c; /* Bege claro no hover */
+        }
+
+        .office-footer-copyright {
+            margin-top: 1rem;
+            border-top: 1px solid #d2b48c;
+            padding-top: 1rem;
+            font-size: 0.8rem;
+        }
+
+        /* Responsividade específica para a página Escritório */
+        @media (max-width: 768px) {
+            .office-header {
+                flex-direction: column;
+                height: auto;
+            }
+            .office-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .office-nav li {
+                margin: 0.5rem 0;
+            }
+            .office-main-section {
+                padding: 3rem 1rem;
+            }
+            .office-main-title {
+                font-size: 2.5rem;
+            }
+            .office-locations {
+                flex-direction: column;
+            }
+        }
