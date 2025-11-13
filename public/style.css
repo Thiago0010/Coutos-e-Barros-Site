@@ -369,6 +369,7 @@ header h1 a{
 
         .contact-info a:hover {
             color: #d2b48c; /* Bege claro no hover */
+            transition: color 0.5s;
         }
 
         .contact-info span {
@@ -436,6 +437,7 @@ header h1 a{
         button[type="submit"]:hover {
             background-color: #d2b48c;
             color: #004d40;
+            transition: background-color 0.5s, color 0.5s;
         }
 
         /* Responsividade */
@@ -706,3 +708,206 @@ header h1 a{
                 flex-direction: column;
             }
         }
+            .hero-ba {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./imgs/banner-escritorio-min.png'); /* Imagem mais vívida com iluminação quente */
+            background-size: cover;
+            background-position: center;
+            filter: saturate(1.3) brightness(0.7); /* Ajuste para maior vivacidade e luz, aplicado apenas ao fundo */
+            z-index: 0;
+        }
+          .NEVr {
+            width: 60px;
+            height: 60px;
+            background-color: #224d29; /* Marrom */
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            top: -30px;
+        }
+        .icons a {
+            text-decoration: none;
+        }
+        .about-full-text{
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            line-height: 1.5;
+            
+        }
+        .escritorio-body{
+            background-color: #ffffff;
+        }
+        .about-full-text h2{
+            margin-top: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 750;
+            color: #004d40;
+        }
+        .about-full-text p{
+            text-align: justify;
+            font-size: 1.1rem;
+            color: #224d29;
+            font-weight: 400;
+        }
+        .about-full-text img{
+            width: 100%;
+            height: auto;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }  
+        .about-full-text h3{
+            margin-top: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #004d40;
+        }
+        .timeline-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Classe para o título */
+        .timeline-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #8a783f; /* Aproximando a cor marrom da imagem */
+            margin-bottom: 60px;
+        }
+
+        /* Classe para a linha de anos */
+        .timeline-years {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        /* Classe para a linha horizontal */
+        .timeline-line {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 37px; /* Ajustado para alinhar ao centro dos dots */
+            height: 3px;
+            background-color: #ccc;
+            z-index: -1;
+        }
+
+        /* Classe para cada botão de ano */
+        .timeline-year-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #666;
+            position: relative;
+            padding: 0 15px;
+        }
+
+        /* Classe para o ponto (dot) abaixo do ano */
+        .timeline-year-dot {
+            display: block;
+            width: 14px;
+            height: 14px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin:8px auto 0;
+            transition: background-color 0.3s;
+        }
+
+        /* Classe para o ponto ativo */
+        .timeline-year-dot.active {
+            background-color: #b49061;
+        }
+
+        /* Classe para o conteúdo */
+        .timeline-content {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            list-style-type: disc;
+            padding-left: 30px;
+            color: #666;
+            font-size: 18px;
+        }
+
+        /* Classe para conteúdo visível com efeito de aparecer */
+        .timeline-content.visible {
+            opacity: 1;
+        }
+
+        /* Classe para o seta final */
+        .timeline-arrow {
+            font-size: 24px;
+            color: #666;
+            margin-left: -15px; /* Ajuste para proximidade */
+        }
+        .timeline-year-button:hover .timeline-year-dot {
+            background-color: #ccc;
+            cursor: default;
+        }
+        .timeline-year-button:hover {
+            cursor: default;
+        }
+        /* Classe para o contêiner da seção */
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            position: relative; /* Necessário para posicionamento absoluto */
+        }
+
+        /* Classe para o título */
+        .section-title {
+            font-size: 48px;
+            font-family: 'Playfair Display', serif;
+            color: #006400 !important; /* Verde escuro aproximado da imagem */
+            font-weight: bold;
+            margin: 0 20px 0 0;
+            padding: 0;
+            white-space: nowrap;
+            flex-shrink: 0;
+            position: absolute; /* Inicialmente absoluto para JS manipular */
+            
+            left: 20px; /* Alinhado com padding */
+            transition: top 0.01s ease-out; /* Suaviza o movimento */
+        }
+
+        /* Classe para o ponto marrom */
+        .brown-dot {
+            color: #8B4513; /* Cor marrom da imagem */
+        }
+
+        /* Classe para o wrapper de conteúdo */
+        .content-wrapper {
+            flex: 1;
+            margin-left: 250px; /* Espaço para o título; ajuste conforme o tamanho do título */
+        }
+
+        /* Classe para o parágrafo de conteúdo */
+        .section-content {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+            margin: 0 0 9px 0;
+            max-width: 500px;
+            position:relative;
+            right: -90px;
+        }
+        .body-cdb{
+            background-color: #f0f0e8;
+            filter: none;
+        }
+        .sec2{
+            background-color: #ffffff6e; 
+    }

@@ -7,3 +7,5 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             const formattedMessage = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\nMensagem: ${message}`);
             window.location.href = `https://wa.me/${whatsappNumber}?text=${formattedMessage}`;
         });
+        // Objeto com conteúdos por ano (exemplo; adicione mais conforme necessário)
+    
